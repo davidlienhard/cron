@@ -4,14 +4,14 @@
  *
  * @package         Cron
  * @author          David Lienhard <david.lienhard@tourasia.ch>
- * @version         1.0.0, 16.11.2020
+ * @version         1.0.1, 17.11.2020
  * @since           1.0.0, 16.11.2020, created
  * @copyright       tourasia
  */
 
 declare(strict_types=1);
 
-namespace DavidLienhard;
+namespace DavidLienhard\Cron;
 
 /**
  * basic Cron-class

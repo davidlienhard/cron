@@ -4,25 +4,27 @@
  *
  * @package         Cron
  * @author          David Lienhard <david.lienhard@tourasia.ch>
- * @version         1.0.0, 16.11.2020
+ * @version         1.0.1, 17.11.2020
  * @since           1.0.0, 16.11.2020, created
  * @copyright       tourasia
  */
 
 declare(strict_types=1);
 
-namespace DavidLienhard;
+namespace DavidLienhard\Cron;
+
+use \DavidLienhard\Cron\CronInterface;
 
 /**
  * basic Cron-class
  * allows to check if a given Cron-expression is due
  *
  * @author          David Lienhard <david.lienhard@tourasia.ch>
- * @version         1.0.0, 16.11.2020
+ * @version         1.0.1, 17.11.2020
  * @since           1.0.0, 16.11.2020, created
  * @copyright       tourasia
  */
-class Cron implements \DavidLienhard\CronInterface
+class Cron implements CronInterface
 {
     /**
      * checks if a given Cron expression is due to be run
