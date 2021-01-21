@@ -44,6 +44,10 @@ class Cron implements CronInterface
         $isDue = true;
         $time = strtotime($date);
 
+        if ($time === false) {
+            $time = time();
+        }
+
         // MINUTES
         if (isset($data['minute']) && trim($data['minute']) != "") {
             if (!self::isValid($data['minute'], intval(date("i", $time)), 60)) {
