@@ -36,7 +36,6 @@ class Cron implements CronInterface
      * @copyright       tourasia
      * @param           array           $data           the Cron expression to be checked
      * @param           string          $date           an optional date
-     * @return          bool
      * @uses            Cron::isValid()
      */
     public static function isDue(array $data, string $date = "now") : bool
@@ -105,7 +104,6 @@ class Cron implements CronInterface
      * @param           string          $expression     the expression to be checked
      * @param           int             $needle         the needle to be checked against
      * @param           int             $maxValue       maximal allowed value for the increments
-     * @return          bool
      */
     private static function isValid(string $expression, int $needle, int $maxValue) : bool
     {
@@ -138,13 +136,13 @@ class Cron implements CronInterface
                 $base = $maxValue;
             }
 
-            $list = [ ];
+            $list = [];
             for ($i = $base; $i < $maxValue; $i += $increment) {
                 $list[] = $i;
             }
 
             return in_array($needle, $list);
-        }
+        }//end if
 
         // LISTS (1,3,4)
         if ($hasList) {

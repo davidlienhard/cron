@@ -34,7 +34,6 @@ interface CronInterface
      * @copyright       tourasia
      * @param           array           $data           the Cron expression to be checked
      * @param           string          $date           an optional date
-     * @return          bool
      * @uses            Cron::isValid()
      */
     public static function isDue(array $data, string $date = "now") : bool;
