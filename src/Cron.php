@@ -42,42 +42,42 @@ class Cron implements CronInterface
         }
 
         // MINUTES
-        if (isset($data['minute']) && trim($data['minute']) != "") {
+        if (isset($data['minute']) && trim($data['minute']) !== "") {
             if (!self::isValid($data['minute'], intval(date("i", $time)), 60)) {
                 $isDue = false;
             }
         }
 
         // HOURS
-        if (isset($data['hour']) && trim($data['hour']) != "") {
+        if (isset($data['hour']) && trim($data['hour']) !== "") {
             if (!self::isValid($data['hour'], intval(date("G", $time)), 60)) {
                 $isDue = false;
             }
         }
 
         // DAYS
-        if (isset($data['day']) && trim($data['day']) != "") {
+        if (isset($data['day']) && trim($data['day']) !== "") {
             if (!self::isValid($data['day'], intval(date("j", $time)), 31)) {
                 $isDue = false;
             }
         }
 
         // MONTHS
-        if (isset($data['month']) && trim($data['month']) != "") {
+        if (isset($data['month']) && trim($data['month']) !== "") {
             if (!self::isValid($data['month'], intval(date("n", $time)), 12)) {
                 $isDue = false;
             }
         }
 
         // YEARS
-        if (isset($data['year']) && trim($data['year']) != "") {
+        if (isset($data['year']) && trim($data['year']) !== "") {
             if (!self::isValid($data['year'], intval(date("Y", $time)), 7)) {
                 $isDue = false;
             }
         }
 
         // DAYS OF WEEK
-        if (isset($data['dayOfWeek']) && trim($data['dayOfWeek']) != "") {
+        if (isset($data['dayOfWeek']) && trim($data['dayOfWeek']) !== "") {
             if (!self::isValid($data['dayOfWeek'], intval(date("w", $time)), 7)) {
                 $isDue = false;
             }
@@ -116,11 +116,11 @@ class Cron implements CronInterface
             list($base, $increment) = array_map("trim", explode("/", $expression));
             $increment = intval($increment);
 
-            if ($increment == 0) {
+            if ($increment === 0) {
                 return false;
             }
 
-            if ($base == "*") {
+            if ($base === "*") {
                 $base = 0;
             }
 
@@ -133,16 +133,16 @@ class Cron implements CronInterface
                 $list[] = $i;
             }
 
-            return in_array($needle, $list);
+            return in_array($needle, $list, true);
         }//end if
 
         // LISTS (1,3,4)
         if ($hasList) {
             $list = array_map("intVal", explode(",", $expression));
-            return in_array($needle, $list);
+            return in_array($needle, $list, true);
         }
 
         // SIMPLE EXPRESSION (5)
-        return intval($expression) == $needle;
+        return intval($expression) === $needle;
     }
 }
