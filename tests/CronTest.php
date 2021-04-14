@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace DavidLienhard;
 
-use \PHPUnit\Framework\TestCase;
-use \DavidLienhard\Cron\Cron;
-use \DavidLienhard\Cron\CronInterface;
+use DavidLienhard\Cron\Cron;
+use DavidLienhard\Cron\CronInterface;
+use PHPUnit\Framework\TestCase;
 
 class CronTest extends TestCase
 {
@@ -16,15 +16,7 @@ class CronTest extends TestCase
     public function testCanBeCreated(): void
     {
         $cron = new Cron;
-
-        $this->assertInstanceOf(
-            Cron::class,
-            $cron
-        );
-
-        $this->assertInstanceOf(
-            CronInterface::class,
-            $cron
-        );
+        $this->assertInstanceOf(Cron::class, $cron);
+        $this->assertInstanceOf(CronInterface::class, $cron);
     }
 }
