@@ -1,6 +1,6 @@
 {
     "name": "davidlienhard/cron",
-    "license": "proprietary",
+    "license": ["MIT"],
     "description": "🐘 php library to check cron expressions",
     "keywords": [ "cron", "php", "library" ],
     "type": "libary",
