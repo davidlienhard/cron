@@ -3,8 +3,8 @@
  * class to check Cron-expressions
  *
  * @package         Cron
- * @author          David Lienhard <david.lienhard@tourasia.ch>
- * @copyright       tourasia
+ * @author          David Lienhard <github@lienhard.win>
+ * @copyright       David Lienhard
  */
 
 declare(strict_types=1);
@@ -17,8 +17,8 @@ use \DavidLienhard\Cron\CronInterface;
  * basic Cron-class
  * allows to check if a given Cron-expression is due
  *
- * @author          David Lienhard <david.lienhard@tourasia.ch>
- * @copyright       tourasia
+ * @author          David Lienhard <github@lienhard.win>
+ * @copyright       David Lienhard
  */
 class Cron implements CronInterface
 {
@@ -26,8 +26,8 @@ class Cron implements CronInterface
      * checks if a given Cron expression is due to be run
      * accepts an optional date to be checked against. default is now
      *
-     * @author          David Lienhard <david.lienhard@tourasia.ch>
-     * @copyright       tourasia
+     * @author          David Lienhard <github@lienhard.win>
+     * @copyright       David Lienhard
      * @param           array           $data           the Cron expression to be checked
      * @param           string          $date           an optional date
      * @uses            Cron::isValid()
@@ -91,8 +91,8 @@ class Cron implements CronInterface
      * checks if a given Cron expression is valid
      * supports ranges, increments and lists but no combinations
      *
-     * @author          David Lienhard <david.lienhard@tourasia.ch>
-     * @copyright       tourasia
+     * @author          David Lienhard <github@lienhard.win>
+     * @copyright       David Lienhard
      * @param           string          $expression     the expression to be checked
      * @param           int             $needle         the needle to be checked against
      * @param           int             $maxValue       maximal allowed value for the increments

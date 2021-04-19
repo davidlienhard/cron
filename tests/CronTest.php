@@ -10,9 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 class CronTest extends TestCase
 {
-    /**
-     * @covers \DavidLienhard\Cron\Cron
-    */
+    /** @covers \DavidLienhard\Cron\Cron */
     public function testCanBeCreated(): void
     {
         $cron = new Cron;
