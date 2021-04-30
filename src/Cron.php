@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace DavidLienhard\Cron;
 
-use \DavidLienhard\Cron\CronInterface;
+use DavidLienhard\Cron\CronInterface;
 
 /**
  * basic Cron-class
