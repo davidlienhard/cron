@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types=1);
+
 /**
  * class to check Cron-expressions
  *
@@ -6,8 +7,6 @@
  * @author          David Lienhard <github@lienhard.win>
  * @copyright       David Lienhard
  */
-
-declare(strict_types=1);
 
 namespace DavidLienhard\Cron;
 
